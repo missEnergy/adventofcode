@@ -21,7 +21,7 @@ for line in data:
         answer_a = answer_a + math.pow(2, matches - 1)
 
 answer_a = int(answer_a)
-# print(answer_a)
+print(answer_a)
 # submit(answer_a, part="a", day=day, year=year)
 
 # part B
@@ -44,4 +44,4 @@ for idx, line in enumerate(data):
 answer_b = int(math.fsum(copies))
 
 print(answer_b)
-submit(answer_b, part="b", day=day, year=year)
+# submit(answer_b, part="b", day=day, year=year)

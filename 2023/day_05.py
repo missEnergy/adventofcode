@@ -1,12 +1,12 @@
 from aocd import get_data, submit
 
-# HARD!
 year, day = 2023, 5
 
 # parse data
 data = get_data(year=year, day=day).split("\n")
-print(data)
-# for line in data:
+
+for line in data:
+    print(line)
 
 # part A
 answer_a = 0
