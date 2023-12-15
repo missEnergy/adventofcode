@@ -41,6 +41,7 @@ print(answer_a)
 # submit(answer_a, part="a", day=day, year=year)
 
 
+# Part B
 def make_circle(platform):
     new_platform = platform
     for i in range(4):
@@ -54,7 +55,7 @@ def make_circle(platform):
         new_platform = tmp_platform
     return new_platform
 
-# Part B
+
 all_platforms = []
 nxt_platform = platform_start
 for i in range(1, 300):
@@ -75,4 +76,4 @@ for i in nxt_platform:
         if j == "O":
             answer_b += idj + 1
 print(answer_b)
-submit(answer_b, part="b", day=day, year=year)
+# submit(answer_b, part="b", day=day, year=year)
