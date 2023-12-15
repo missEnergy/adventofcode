@@ -34,20 +34,34 @@ def replace_by_binary(springs, binary):
     return springs
 
 
+# possible_arrangements = 0
+# for line in data:
+#     springs = line.split(' ')[0]
+#     actual_damaged_springs = [int(i) for i in line.split(' ')[1].split(',')]
+#     n = len([i for i in springs if i == "?"])
+#     for binary in binary_combinations(n):
+#         option = replace_by_binary(springs, binary)
+#         if determine_damaged_springs(option) == actual_damaged_springs:
+#             possible_arrangements += 1
+# print(possible_arrangements)
+# submit(possible_arrangements, part="a", day=day, year=year)
+
+# part B
 possible_arrangements = 0
 for line in data:
-    springs = line.split(' ')[0]
-    actual_damaged_springs = [int(i) for i in line.split(' ')[1].split(',')]
+    springs = ""
+    actual_damaged_springs = []
+    for i in range(5):
+        springs += line.split(' ')[0]
+        actual_damaged_springs += [int(i) for i in line.split(' ')[1].split(',')]
+    print(springs)
+    print(actual_damaged_springs)
     n = len([i for i in springs if i == "?"])
     for binary in binary_combinations(n):
         option = replace_by_binary(springs, binary)
         if determine_damaged_springs(option) == actual_damaged_springs:
             possible_arrangements += 1
 print(possible_arrangements)
-# submit(possible_arrangements, part="a", day=day, year=year)
-
-# part B
-answer_b = 0
 
 # print(answer_b)
 # submit(answer_b, part="b", day=day, year=year)
