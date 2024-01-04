@@ -1,5 +1,6 @@
 from aocd import get_data, submit
 from sympy import *
+from sympy.solvers.solveset import nonlinsolve
 
 year, day = 2023, 24
 
@@ -48,7 +49,29 @@ print("intersections is", intersections_in_test_area)
 # submit(intersections_in_test_area, part="a", day=day, year=year)
 
 # part B
-# answer_b = 0
+px1, py1, pz1 = stones[0][0]
+vx1, vy1, vz1 = stones[0][1]
+px2, py2, pz2 = stones[1][0]
+vx2, vy2, vz2 = stones[1][1]
+px3, py3, pz3 = stones[2][0]
+vx3, vy3, vz3 = stones[2][1]
 
-# print(answer_b)
+u, v, w, a, b, c, d, e, f = symbols('u, v, w, a, b, c, d, e, f')
+sol = nonlinsolve(
+    [
+        px1 + u*vx1 - a - u*d,
+        py1 + u*vy1 - b - u*e,
+        pz1 + u*vz1 - c - u*f,
+        px2 + v*vx2 - a - v*d,
+        py2 + v*vy2 - b - v*e,
+        pz2 + v*vz2 - c - v*f,
+        px3 + w*vx3 - a - w*d,
+        py3 + w*vy3 - b - w*e,
+        pz3 + w*vz3 - c - w*f
+    ],
+    (u, v, w, a, b, c, d, e, f)
+)
+print(sol)
+answer_b = sum([200027938836082, 127127087242193, 219339468239370])
+print(answer_b)
 # submit(answer_b, part="b", day=day, year=year)
