@@ -14,15 +14,15 @@ for line in lines:
     array_b.append(int(b))
 
 # PART A
-# array_a = sorted(array_a)
-# array_b = sorted(array_b)
-#
-# answer = 0
-# for i in range(len(array_a)):
-#     answer += abs(array_a[i]-array_b[i])
-#
-# print(answer)
-# submit(answer, part="a", day=day, year=year)
+array_a = sorted(array_a)
+array_b = sorted(array_b)
+
+answer = 0
+for i in range(len(array_a)):
+    answer += abs(array_a[i]-array_b[i])
+
+print(answer)
+submit(answer, part="a", day=day, year=year)
 
 # PART B
 answer = 0
