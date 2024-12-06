@@ -10,6 +10,6 @@ for line in lines:
     print(line)
 
 # PART A
-submit(safe_reports, part="a", day=day, year=year)
+submit(answer, part="a", day=day, year=year)
 # PART B
-submit(safe_reports, part="b", day=day, year=year)
+submit(answer, part="b", day=day, year=year)
