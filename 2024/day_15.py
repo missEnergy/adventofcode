@@ -227,7 +227,7 @@ for m in moves:
                 robot_coord = (robot_coord[0] - 1, robot_coord[1])
             elif m == 'v':
                 robot_coord = (robot_coord[0] + 1, robot_coord[1])
-    print_grid()
+    # print_grid()
 
 answer = 0
 for i in range(len(grid)):
